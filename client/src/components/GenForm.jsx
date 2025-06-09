@@ -74,6 +74,13 @@ const GenForm = ({
       setCreatePostLoading(false);
     });
   };
+
+
+
+
+  
+
+
   return (
     <Form>
       <Top>

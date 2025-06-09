@@ -9,8 +9,9 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ extended: true }));
+// Increase limit here (e.g., 10MB)
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 // Add MongoDB connection event listeners
 mongoose.connection.on('connecting', () => console.log('Connecting to MongoDB...'));
